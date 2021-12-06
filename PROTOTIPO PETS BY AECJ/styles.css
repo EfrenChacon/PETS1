@@ -1,0 +1,49 @@
+
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-container{
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn-item{
+    background-color: white;
+    display: block;
+    color: rgb(7, 7, 7);
+    padding: 8px;
+    font-weight: bold;
+    border-bottom: 1px solid white(167,166,0.5);
+}
+
+.item-content{
+    background: white;
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+    color: black;
+}
+
+.active + .item-content{
+    max-height: 1000px;
+    padding: 10px;
+    opacity: 1;
+}
+
+.btn-item.active{
+    background: cyan;
+
+}
+
+.btn-item::after{
+    content: '\002b';
+    float: right;
+}
+
+.btn-item.active::after{
+    content: '\02212';
+    float: right;
+}
